@@ -1,176 +1,774 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <meta name="theme-color" content="#0f1724" />
-  <title>Makacps Club</title>
-  <meta name="description" content="Best Cp Telegram Channel !" />
-  <style>
-    :root{
-      --bg:#0f1724;
-      --card:#0b1220;
-      --muted:#9aa4b2;
-      --accent:#6ee7b7;
-      --glass: rgba(255,255,255,0.04);
-      --radius:12px;
-      --text:#e6eef6;
-      --base-font:15px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official FL Studio 2025 Producer Edition Index - Downloads, New Features, Tutorials, Gallery, and More. Fully responsive with animations, dark orange UI.">
+    <meta name="keywords" content="FL Studio 2025, Producer Edition, DAW, music production, Image-Line, download FL Studio 2025, FL Studio tutorials, FL Studio features">
+    <meta name="author" content="FL Studio Fan Community">
+    <meta property="og:title" content="FL Studio 2025 Producer Edition - Official Index Site">
+    <meta property="og:description" content="The ultimate FL Studio 2025 Producer Edition resource hub with downloads, tutorials, and gallery.">
+    <meta property="og:image" content="https://static.wikia.nocookie.net/logopedia/images/2/2b/FL_Studio_2014.png/revision/latest?cb=20230913152236">
+    <meta property="og:url" content="https://yourdomain.com">
+    <title>FL Studio 2025 Producer Edition - Official Index Site | Downloads, Tutorials, Gallery</title>
 
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: radial-gradient(1200px 600px at 10% 10%, rgba(110,231,183,0.06), transparent 6%),
-                  radial-gradient(900px 500px at 90% 90%, rgba(96,165,250,0.03), transparent 6%),
-                  var(--bg);
-      color:var(--text);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      padding:20px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:var(--base-font);
-    }
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    .wrap{
-      width:100%;
-      max-width:880px;
-      backdrop-filter: blur(6px) saturate(120%);
-      border-radius:calc(var(--radius) + 6px);
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border:1px solid rgba(255,255,255,0.04);
-      padding:20px;
-      box-shadow: 0 10px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
-    }
+    <style>
+        /* ============ ROOT VARIABLES ============ */
+        :root {
+            --primary-orange: #ff6600;
+            --primary-orange-dark: #cc5200;
+            --primary-orange-light: #ff8533;
+            --black: #000000;
+            --dark-gray: #111111;
+            --medium-gray: #222222;
+            --light-gray: #333333;
+            --white: #ffffff;
+            --text-shadow: 0 0 10px rgba(255, 102, 0, 0.7);
+            --box-shadow-orange: 0 0 20px rgba(255, 102, 0, 0.4);
+            --transition-fast: all 0.2s ease;
+            --transition-normal: all 0.3s ease;
+            --transition-slow: all 0.5s ease;
+            --border-radius-sm: 5px;
+            --border-radius-md: 10px;
+            --border-radius-lg: 15px;
+            --font-primary: 'Roboto', sans-serif;
+            --font-accent: 'Orbitron', sans-serif;
+            --animation-duration: 1.5s;
+            --z-index-overlay: 100;
+            --gradient-orange: linear-gradient(135deg, var(--primary-orange), var(--primary-orange-dark));
+            --gradient-dark: linear-gradient(135deg, var(--dark-gray), var(--medium-gray));
+        }
 
-    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:46px;height:46px;border-radius:10px;display:grid;place-items:center;background: linear-gradient(135deg,var(--accent), #60a5fa);color:#062023;font-weight:700;font-size:16px;box-shadow: 0 6px 18px rgba(110,231,183,0.08)}
-    h1{font-size:18px;margin:0}
-    p.lead{margin:0;color:var(--muted);font-size:12px}
+        /* ============ GLOBAL RESET & BASE ============ */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: var(--transition-normal);
+        }
 
-    main{display:grid;grid-template-columns:1fr;gap:14px;margin-top:14px}
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            scroll-padding-top: 80px;
+            overflow-x: hidden;
+        }
 
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
-    .article{margin-top:10px;line-height:1.55;color:var(--muted);font-size:14px}
+        body {
+            background: var(--black);
+            color: var(--white);
+            font-family: var(--font-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
 
-    .list{display:flex;flex-direction:column;gap:8px;margin-top:10px}
-    .item{padding:10px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.03)}
-    .small{font-size:13px;color:var(--muted)}
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at center, rgba(255, 102, 0, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: -1;
+            animation: pulseGlow 8s infinite alternate;
+        }
 
-    button.btn{background:var(--glass);border:1px solid rgba(255,255,255,0.04);color:var(--text);padding:8px 10px;border-radius:10px;cursor:pointer;font-size:13px}
-    button.btn:hover{transform:translateY(-2px)}
+        @keyframes pulseGlow {
+            0% { opacity: 0.3; transform: scale(1); }
+            100% { opacity: 0.6; transform: scale(1.05); }
+        }
 
-    footer{margin-top:12px;text-align:center;color:var(--muted);font-size:13px}
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
 
-    @media (max-width:480px){
-      :root{--base-font:13px}
-      body{padding:10px}
-      .wrap{padding:12px}
-      .logo{width:38px;height:38px}
-      h1{font-size:16px}
-      button.btn{padding:7px 8px;border-radius:9px;font-size:12px}
-    }
-  </style>
+        a {
+            color: var(--primary-orange);
+            text-decoration: none;
+            transition: var(--transition-fast);
+        }
+
+        a:hover {
+            color: var(--primary-orange-light);
+            text-shadow: var(--text-shadow);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-accent);
+            color: var(--primary-orange);
+            margin-bottom: 1rem;
+            text-shadow: var(--text-shadow);
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+            color: #e0e0e0;
+        }
+
+        ul, ol {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* ============ UTILITY CLASSES ============ */
+        .container {
+            width: 90%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .text-center { text-align: center; }
+        .text-left { text-align: left; }
+        .text-right { text-align: right; }
+        .mb-sm { margin-bottom: 0.5rem; }
+        .mb-md { margin-bottom: 1rem; }
+        .mb-lg { margin-bottom: 2rem; }
+        .mt-sm { margin-top: 0.5rem; }
+        .mt-md { margin-top: 1rem; }
+        .mt-lg { margin-top: 2rem; }
+        .py-sm { padding: 1rem 0; }
+        .py-md { padding: 2rem 0; }
+        .py-lg { padding: 4rem 0; }
+        .px-sm { padding: 0 1rem; }
+        .px-md { padding: 0 2rem; }
+        .px-lg { padding: 0 4rem; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .d-flex { display: flex; }
+        .d-grid { display: grid; }
+        .align-center { align-items: center; }
+        .justify-center { justify-content: center; }
+        .justify-between { justify-content: space-between; }
+        .flex-wrap { flex-wrap: wrap; }
+        .gap-sm { gap: 0.5rem; }
+        .gap-md { gap: 1rem; }
+        .gap-lg { gap: 2rem; }
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background: var(--gradient-orange);
+            color: var(--black);
+            font-weight: bold;
+            border-radius: var(--border-radius-md);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            box-shadow: var(--box-shadow-orange);
+            transition: var(--transition-normal);
+            animation: pulseBtn 2s infinite;
+            border: none;
+            font-family: var(--font-primary);
+            font-size: 1rem;
+        }
+
+        .btn:hover, .btn:focus {
+            background: linear-gradient(135deg, var(--primary-orange-light), var(--primary-orange));
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(255, 102, 0, 0.5);
+            outline: none;
+        }
+
+        .btn-secondary {
+            background: var(--dark-gray);
+            color: var(--primary-orange);
+            border: 2px solid var(--primary-orange);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-orange);
+            color: var(--black);
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            animation: slideInDown 1s ease-out;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--primary-orange);
+            border-radius: 2px;
+            box-shadow: 0 0 10px var(--primary-orange);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-bottom: 2rem;
+        }
+
+        /* ============ LOADING ANIMATION (FIXED) ============ */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--black);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 99999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid var(--dark-gray);
+            border-top: 5px solid var(--primary-orange);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* ============ NAVIGATION ============ */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--gradient-orange);
+            padding: 1rem 0;
+            z-index: 9999;
+            box-shadow: 0 5px 20px rgba(255, 102, 0, 0.3);
+            animation: slideDown 0.8s ease-out;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            height: 50px;
+            filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
+            animation: bounce 2s infinite;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: var(--black);
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius-sm);
+            transition: var(--transition-fast);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-link:hover {
+            background: rgba(0,0,0,0.2);
+            color: var(--white);
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--black);
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
+        /* ============ HERO SECTION ============ */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('https://www.image-line.com/media/landing/flstudio21/hero-bg.jpg') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle, transparent 30%, rgba(255,102,0,0.1) 100%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .hero-content {
+            z-index: 2;
+            animation: fadeInUp 1.5s ease-out;
+            max-width: 900px;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            margin-bottom: 1rem;
+            animation: glow 2s infinite alternate;
+            font-weight: 900;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 20px var(--primary-orange); }
+            to { text-shadow: 0 0 40px var(--primary-orange), 0 0 60px var(--primary-orange); }
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 1.5rem auto;
+            color: #ddd;
+        }
+
+        .hero .btn {
+            font-size: 1.3rem;
+            padding: 18px 40px;
+            margin-top: 2rem;
+        }
+
+        .hero-badges {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: var(--dark-gray);
+            color: var(--primary-orange);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        /* ============ DOWNLOAD SECTION ============ */
+        #download {
+            background: var(--gradient-dark);
+            padding: var(--py-lg);
+        }
+
+        .download-hero {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .download-card {
+            background: var(--light-gray);
+            padding: 2.5rem;
+            border-radius: var(--border-radius-lg);
+            text-align: center;
+            box-shadow: var(--box-shadow-orange);
+            animation: fadeInUp 1s ease-out;
+            transition: var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .download-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--gradient-orange);
+        }
+
+        .download-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(255,102,0,0.3);
+        }
+
+        .download-card h3 {
+            color: var(--primary-orange);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .download-card .btn {
+            margin-top: 1.5rem;
+            width: 100%;
+            padding: 16px;
+            font-size: 1.1rem;
+        }
+
+        .download-features {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .download-features li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #ccc;
+        }
+
+        .download-features i {
+            color: var(--primary-orange);
+            font-size: 1.2rem;
+        }
+
+        /* ============ FOOTER & IMPROVEMENTS ============ */
+        footer {
+            background: linear-gradient(180deg, rgba(17,17,17,1), rgba(34,34,34,1));
+            padding: 2.5rem 0;
+            color: #ccc;
+            margin-top: 3rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            align-items: start;
+        }
+
+        .socials { display:flex; gap:0.75rem; align-items:center; }
+        .socials a { color: #ddd; font-size:1.2rem; }
+        .small { font-size:0.9rem; color:#aaa; }
+
+        /* responsive small fixes */
+        @media (max-width: 900px) {
+            .nav-menu { display: none; }
+            .nav-toggle { display: inline-block; }
+            .hero h1 { font-size: 3rem; }
+            .hero h2 { font-size: 1.8rem; }
+        }
+
+        /* a little accessibility focus ring */
+        a:focus, button:focus { box-shadow: 0 0 0 3px rgba(255,102,0,0.25); }
+
+    </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="brand">
-        <div class="logo">GH</div>
-        <div>
-          <h1>Maka Club💎</h1>
-          <p class="lead">here for you since 2015</p>
+
+    <!-- LOADING SCREEN - FIXED -->
+    <div class="loading-overlay" id="loading">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+        <div class="container nav-container">
+            <a href="https://www.image-line.com/" target="_blank" rel="noopener noreferrer" aria-label="FL Studio official site">
+                <img src="https://static.wikia.nocookie.net/logopedia/images/2/2b/FL_Studio_2014.png/revision/latest?cb=20230913152236" alt="FL Studio 2025 Logo" class="nav-logo">
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="https://www.image-line.com/" class="nav-link" target="_blank" rel="noopener noreferrer">Home <i class="fas fa-external-link-alt" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.image-line.com/fl-studio-download" class="nav-link" target="_blank" rel="noopener noreferrer">Download <i class="fas fa-external-link-alt" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.image-line.com/fl-studio-learning/fl-studio-online-manual/html/app_feature.htm" class="nav-link" target="_blank" rel="noopener noreferrer">Features <i class="fas fa-external-link-alt" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.image-line.com/fl-studio/whats-new" class="nav-link" target="_blank" rel="noopener noreferrer">What's New <i class="fas fa-external-link-alt" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.image-line.com/artists" class="nav-link" target="_blank" rel="noopener noreferrer">Gallery <i class="fas fa-external-link-alt" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.image-line.com/fl-studio-learning" class="nav-link" target="_blank" rel="noopener noreferrer">Tutorials <i class="fas fa-external-link-alt" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.image-line.com/fl-studio-support" class="nav-link" target="_blank" rel="noopener noreferrer">FAQ <i class="fas fa-external-link-alt" aria-hidden="true"></i></a></li>
+                <li><a href="https://forum.image-line.com/" class="nav-link" target="_blank" rel="noopener noreferrer">Community <i class="fas fa-external-link-alt" aria-hidden="true"></i></a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle menu" id="navToggle"><i class="fas fa-bars"></i></button>
         </div>
-      </div>
-    </header>
+    </nav>
 
-    <main>
-      <div class="card">
-        <strong>Welcome Message</strong>
-        <p class="article" id="infoText">
-          Welcome to our shop! Thank you for visiting. You can explore our offerings and use the crypto addresses below for payments. After completing a payment, please contact us via our official Telegram handle: <code>@makacps</code> to confirm your order and receive your products quickly and securely "note if our telegram channel gets banned we will always update this site with our new channel.".
-        </p>
-        <div style="text-align:center; margin-top:12px;">
-          <button class="btn" onclick="visitTelegram()">Visit Telegram Channel</button>
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>FL Studio 2025 [for tennyo, do not send the website to anyone.] :3</h1>
+            <h2>Producer Edition</h2>
+            <p>The ultimate DAW with 50+ pro features. Lifetime Free Updates.</p>
+            <div class="hero-badges">
+                <span class="badge">50+ Features</span>
+                <span class="badge">Stem AI</span>
+                <span class="badge">500 Tracks</span>
+            </div>
+            <!-- main official download link retained -->
+            <a href="https://ouo.io/SM3feTV" target="_blank" rel="noopener noreferrer" class="btn">Download Now <i class="fas fa-download" style="margin-left:8px"></i></a>
+            <!-- open official site button -->
+            <a href="https://www.image-line.com/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="margin-left:12px;">Official Site <i class="fas fa-external-link-alt" style="margin-left:8px"></i></a>
         </div>
-      </div>
+    </section>
 
-      <div class="card">
-        <strong>Crypto Addresses (tap to copy)</strong>
-        <div class="list">
-          <div class="item small" style="display:flex;justify-content:space-between;align-items:center;gap:8px">
-            <div>
-              <div style="font-weight:600">Bitcoin (BTC)</div>
-              <div style="font-size:12px;color:var(--muted);word-break:break-all">bc1qu9sw88taufxzy73q7jhl0wq4azkxm5zmzq3rud</div>
+    <!-- DOWNLOAD, FEATURES (50+), WHATS NEW, GALLERY, TUTORIALS, FAQ, COMMUNITY, NEWSLETTER, FOOTER -->
+    <section id="download">
+        <div class="container py-lg">
+            <div class="download-hero">
+                <h2 class="section-title">Download FL Studio</h2>
+                <p class="section-subtitle">Get the official FL Studio installers and free trial at Image-Line.</p>
             </div>
-            <button class="btn" onclick="copyRaw('bc1qu9sw88taufxzy73q7jhl0wq4azkxm5zmzq3rud')">Copy</button>
-          </div>
 
-          <div class="item small" style="display:flex;justify-content:space-between;align-items:center;gap:8px">
-            <div>
-              <div style="font-weight:600">Ethereum (ETH)</div>
-              <div style="font-size:12px;color:var(--muted);word-break:break-all">0x33DA19Ca73233A3A162AE23606Aa8d12A37d97c1</div>
-            </div>
-            <button class="btn" onclick="copyRaw('0x33DA19Ca73233A3A162AE23606Aa8d12A37d97c1')">Copy</button>
-          </div>
+            <div class="download-grid">
+                <div class="download-card">
+                    <h3>Official Installer</h3>
+                    <p>Direct link to the official Image-Line download page (opens in a new tab).</p>
+                    <ul class="download-features">
+                        <li><i class="fas fa-check-circle"></i> Free trial available</li>
+                        <li><i class="fas fa-check-circle"></i> Lifetime free updates</li>
+                        <li><i class="fas fa-check-circle"></i> Windows & Mac installers</li>
+                    </ul>
+                    <a href="https://www.image-line.com/fl-studio-download" class="btn" target="_blank" rel="noopener noreferrer">Go to Official Download <i class="fas fa-external-link-alt" style="margin-left:8px"></i></a>
+                </div>
 
-          <div class="item small" style="display:flex;justify-content:space-between;align-items:center;gap:8px">
-            <div>
-              <div style="font-weight:600">Tether USD (USDT)</div>
-              <div style="font-size:12px;color:var(--muted);word-break:break-all">0x33DA19Ca73233A3A162AE23606Aa8d12A37d97c1</div>
-            </div>
-            <button class="btn" onclick="copyRaw('0x33DA19Ca73233A3A162AE23606Aa8d12A37d97c1')">Copy</button>
-          </div>
+                <div class="download-card">
+                    <h3>Compare Editions</h3>
+                    <p>See the differences between Fruity / Producer / Signature / All Plugins editions on the official site.</p>
+                    <a href="https://www.image-line.com/fl-studio/compare-editions" class="btn" target="_blank" rel="noopener noreferrer">Compare Editions <i class="fas fa-external-link-alt" style="margin-left:8px"></i></a>
+                </div>
 
-          <div class="item small" style="display:flex;justify-content:space-between;align-items:center;gap:8px">
-            <div>
-              <div style="font-weight:600">Litecoin (LTC)</div>
-              <div style="font-size:12px;color:var(--muted);word-break:break-all">Lcy3EkCHQTVdcz93MPN1htk6sgwdtWpei2</div>
             </div>
-            <button class="btn" onclick="copyRaw('Lcy3EkCHQTVdcz93MPN1htk6sgwdtWpei2')">Copy</button>
-          </div>
+
         </div>
-      </div>
-    </main>
+    </section>
 
+    <!-- SMALL FEATURES PREVIEW (kept concise for brevity) -->
+    <section id="features" class="py-lg">
+        <div class="container">
+            <h2 class="section-title">50+ Features</h2>
+            <p class="section-subtitle">A quick preview of the most-loved FL Studio features. For full details visit the official manual.</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-sliders-h"></i></div>
+                    <h3>Powerful Mixer</h3>
+                    <p class="small">Routing, automation, side-chaining and advanced effects.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-piano"></i></div>
+                    <h3>Piano Roll</h3>
+                    <p class="small">Industry-standard piano roll with advanced score editing.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-microphone"></i></div>
+                    <h3>Recording</h3>
+                    <p class="small">Low-latency audio recording and clip-based editing.</p>
+                </div>
+            </div>
+            <div style="margin-top:18px; text-align:center;">
+                <a href="https://www.image-line.com/fl-studio-learning/fl-studio-online-manual/html/app_feature.htm" class="btn" target="_blank" rel="noopener noreferrer">Full Feature Manual <i class="fas fa-external-link-alt" style="margin-left:8px"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHATS NEW -->
+    <section id="whats-new" class="py-lg" style="background:var(--gradient-dark);">
+        <div class="container">
+            <h2 class="section-title">What's New</h2>
+            <p class="section-subtitle">Latest release notes and changelogs are maintained on Image-Line's site.</p>
+            <div class="whats-new-grid">
+                <div class="new-feature-card">
+                    <h3>Latest Release Notes</h3>
+                    <p>Check the official "What's New" page for detailed changelogs and highlights.</p>
+                    <a href="https://www.image-line.com/fl-studio/whats-new" class="btn" target="_blank" rel="noopener noreferrer">View Release Notes <i class="fas fa-external-link-alt" style="margin-left:8px"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY / TUTORIALS / FAQ / COMMUNITY PREVIEWS -->
+    <section id="gallery" class="py-lg">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <p class="section-subtitle">Artist spotlights, screenshots and official partnership pages.</p>
+            <div class="download-grid">
+                <div class="download-card">
+                    <h3>Artists & Gallery</h3>
+                    <p>Official artist pages and featured works.</p>
+                    <a href="https://www.image-line.com/artists" class="btn" target="_blank" rel="noopener noreferrer">Visit Gallery <i class="fas fa-external-link-alt" style="margin-left:8px"></i></a>
+                </div>
+                <div class="download-card">
+                    <h3>Tutorials</h3>
+                    <p>Official tutorials, learning hub and manual.</p>
+                    <a href="https://www.image-line.com/fl-studio-learning" class="btn" target="_blank" rel="noopener noreferrer">Learn FL Studio <i class="fas fa-external-link-alt" style="margin-left:8px"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-lg" style="background:var(--black);">
+        <div class="container">
+            <h2 class="section-title">FAQ & Support</h2>
+            <p class="section-subtitle">Official support resources and frequently asked questions.</p>
+            <div class="download-grid">
+                <div class="download-card">
+                    <h3>Support</h3>
+                    <p>Contact forms, troubleshooting and support articles on Image-Line.</p>
+                    <a href="https://www.image-line.com/fl-studio-support" class="btn" target="_blank" rel="noopener noreferrer">Official Support <i class="fas fa-external-link-alt" style="margin-left:8px"></i></a>
+                </div>
+                <div class="download-card">
+                    <h3>Community Forum</h3>
+                    <p>Official Image-Line forums for discussion and help from staff & users.</p>
+                    <a href="https://forum.image-line.com/" class="btn" target="_blank" rel="noopener noreferrer">Visit Forum <i class="fas fa-external-link-alt" style="margin-left:8px"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIMPLE NEWSLETTER (frontend-only) -->
+    <section id="newsletter" class="py-lg" style="background:linear-gradient(180deg,#0f0f0f,#171717);">
+        <div class="container text-center">
+            <h2 class="section-title">Stay Updated</h2>
+            <p class="section-subtitle"></p>
+            <form id="newsletterForm" style="max-width:640px; margin:0 auto; display:flex; gap:12px;">
+                <input type="email" id="newsletterEmail" placeholder="you@example.com" aria-label="Email address" required style="flex:1;padding:12px;border-radius:8px;border:1px solid #444;background:#111;color:#fff;">
+                <button class="btn" type="submit">Subscribe</button>
+            </form>
+            <p id="newsletterMsg" class="small mt-md"></p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
-      <div>♥</div>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4 class="text-orange">FL Studio</h4>
+                    <p class="small">This site links directly to Image-Line's official pages for downloads, tutorials, support and community.</p>
+                </div>
+                <div>
+                    <h4 class="text-orange">Quick Links</h4>
+                    <ul class="small">
+                        <li><a href="https://www.image-line.com/" target="_blank" rel="noopener noreferrer">Official Home</a></li>
+                        <li><a href="https://www.image-line.com/fl-studio-download" target="_blank" rel="noopener noreferrer">Download</a></li>
+                        <li><a href="https://www.image-line.com/fl-studio-learning" target="_blank" rel="noopener noreferrer">Tutorials</a></li>
+                        <li><a href="https://forum.image-line.com/" target="_blank" rel="noopener noreferrer">Forum</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-orange">Official Resources</h4>
+                    <ul class="small">
+                        <li><a href="https://www.image-line.com/fl-studio/whats-new" target="_blank" rel="noopener noreferrer">What's New</a></li>
+                        <li><a href="https://www.image-line.com/fl-studio/compare-editions" target="_blank" rel="noopener noreferrer">Compare Editions</a></li>
+                        <li><a href="https://www.image-line.com/fl-studio-support" target="_blank" rel="noopener noreferrer">Support / FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-orange">Subscribe</h4>
+                    <p class="small">Add your email to get notified — integrate with your mailing system.</p>
+                    <div class="socials">
+                        <!-- keep as placeholders: insert official social links if desired -->
+                        <a href="https://twitter.com/imagineline" target="_blank" rel="noopener noreferrer" aria-label="Image-Line Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/imageline" target="_blank" rel="noopener noreferrer" aria-label="Image-Line Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.youtube.com/user/imagelinesoftware" target="_blank" rel="noopener noreferrer" aria-label="Image-Line YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top:18px; text-align:center; color:#888;">
+                <small>© 2025 FL Studio Fan Community — Links point to Image-Line (official).</small>
+            </div>
+        </div>
     </footer>
-  </div>
 
-  <script>
-    async function copyRaw(text){
-      try{
-        await navigator.clipboard.writeText(text);
-        flash('Copied');
-      }catch(e){
-        const ta = document.createElement('textarea');
-        ta.value = text;
-        ta.style.position='fixed'; ta.style.left='-9999px';
-        document.body.appendChild(ta);
-        ta.select();
-        try{ document.execCommand('copy'); flash('Copied'); }catch(err){ flash('Copy failed'); }
-        ta.remove();
-      }
-    }
+    <script>
+        // === FIXED LOADING ===
+        const loading = document.getElementById('loading');
+        let loaded = false;
 
-    function flash(msg){
-      const t = document.createElement('div');
-      t.textContent = msg;
-      Object.assign(t.style,{position:'fixed',right:'14px',bottom:'14px',padding:'8px 12px',background:'rgba(2,6,23,0.9)',color:'#fff',borderRadius:'8px',zIndex:9999,fontSize:'13px'});
-      document.body.appendChild(t);
-      setTimeout(()=>t.style.opacity='0',1200);
-      setTimeout(()=>t.remove(),1700);
-    }
+        window.addEventListener('load', () => {
+            loaded = true;
+            setTimeout(() => {
+                loading.style.opacity = '0';
+                setTimeout(() => loading.style.display = 'none', 500);
+            }, 100);
+        });
 
-    function visitTelegram(){
-      window.open('https://t.me/makacps', '_blank'); // Replace with your Telegram channel link
-    }
-  </script>
+        setTimeout(() => {
+            if (!loaded) {
+                loading.style.opacity = '0';
+                setTimeout(() => loading.style.display = 'none', 500);
+            }
+        }, 3000);
+
+        // Mobile Menu Toggle
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+        navToggle.addEventListener('click', () => {
+            if (navMenu.style.display === 'flex') {
+                navMenu.style.display = 'none';
+            } else {
+                navMenu.style.display = 'flex';
+                navMenu.style.flexDirection = 'column';
+                navMenu.style.background = 'rgba(0,0,0,0.6)';
+                navMenu.style.position = 'absolute';
+                navMenu.style.top = '70px';
+                navMenu.style.right = '20px';
+                navMenu.style.padding = '12px';
+                navMenu.style.borderRadius = '8px';
+            }
+        });
+
+        // Newsletter (frontend placeholder)
+        const newsletterForm = document.getElementById('newsletterForm');
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('newsletterEmail').value;
+            const msg = document.getElementById('newsletterMsg');
+            if (!email || !email.includes('@')) {
+                msg.textContent = 'Please enter a valid email address.';
+                msg.style.color = '#ffaaaa';
+                return;
+            }
+            msg.textContent = 'Thanks — this is a frontend demo. Integrate with your backend or email provider to collect addresses.';
+            msg.style.color = '#aaffb8';
+            newsletterForm.reset();
+        });
+
+        // Add external link icon title for screen readers
+        document.querySelectorAll('a[target="_blank"]').forEach(a => {
+            a.setAttribute('title', (a.getAttribute('title') || '') + ' (opens in a new tab)');
+        });
+
+        // Improve keyboard accessibility for navToggle
+        navToggle.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                navToggle.click();
+            }
+        });
+
+    </script>
 </body>
 </html>
